@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardview1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/black"
+        app:cardCornerRadius="7dp"
+        android:layout_centerInParent="true"
+        app:cardElevation="20dp"
+        app:contentPadding="0dp"
+        android:layout_height="300dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:background="@drawable/bg_transaction_successfull"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_above="@+id/amount"
+                android:layout_centerHorizontal="true"
+                android:tint="#15E372"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="TODO" android:src="@drawable/ic_check_white_24"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/amount"
+                android:layout_above="@+id/view1"
+                android:layout_marginBottom="16dp"
+                android:text="100 USD"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/view1"
+                android:layout_centerInParent="true"
+                android:background="#AAA"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/motif"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="16dp"
+                android:text="Transaction effectuée avec succès"
+                android:gravity="center"
+                android:textColor="@color/colorProductRate"
+                android:textStyle="normal"
+                android:textSize="17sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/print_btn"
+                android:layout_marginTop="16dp"
+                android:text="Imprimer Facture"
+                android:textAllCaps="false"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="#7f009688"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/close"
+        android:contentDescription="TODO" android:src="@drawable/ic_baseline_close_24"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardview1"
+        android:layout_marginTop="20dp"
+        android:tint="@android:color/holo_red_light"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

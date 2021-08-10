@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nivekaa.icepurpykt.infra.view.LabelCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal=".4dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:contentPadding="16dp"
+    app:labelColor="@color/colorSuccess"
+    app:labelAngle="30"
+    app:textAngle="30"
+    app:labelRound="0dp"
+    app:labelWidth="80dp"
+    android:id="@+id/card"
+    android:background="@drawable/product_border_round"
+    android:layout_marginTop="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shoe_nike_air_max_red_128dp"
+            android:layout_weight="6"
+            android:layout_height="0dp"
+            android:contentDescription="@string/product_image" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="@color/colorProductTitle"
+            android:text="Nike Air Max 20"
+            android:ellipsize="end"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:id="@+id/priceLoyout">
+            <TextView
+                android:id="@+id/currencySign"
+                android:layout_width="wrap_content"
+                android:paddingRight="3dp"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorProductTitle"
+                android:text="$"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:gravity="start|center_vertical"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_toEndOf="@+id/currencySign"
+                android:textColor="@color/colorProductPrice"
+                android:text="150.00"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/old_price"
+                android:layout_width="wrap_content"
+                android:gravity="start|center_vertical"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_toEndOf="@+id/price"
+                android:layout_marginStart="5dp"
+                android:textColor="#a5a5fa"
+                android:text="150.00"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+            <RatingBar
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:numStars="5"
+                android:rating="3.7"
+                android:id="@+id/rate"
+                style="@style/productRatingBar"
+                android:max="5"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:contentPadding="4dp"
+            android:id="@+id/btn_add_to_cart"
+            android:foreground="@android:drawable/list_selector_background"
+            app:cardUseCompatPadding="false"
+            android:layout_weight="1.3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:text="@string/add_to_cart"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</com.nivekaa.icepurpykt.infra.view.LabelCardView>

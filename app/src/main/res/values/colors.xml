@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="col">#7b2cbf</color>
+    <color name="colorPrimary">@color/col</color>
+    <color name="colorPrimaryLight">#8C7B2CBF</color>
+    <color name="colorPrimary2">#3b60e4</color>
+    <color name="colorStatusBar">#f0f7f4</color>
+    <color name="colorPrimaryDark">#2e1760</color>
+    <color name="colorPrimaryDark2">#3b60e4</color>
+    <color name="colorAccent">#ff477e</color>
+    <color name="colorProductTitle">#151EC6</color>
+    <color name="colorProductPrice">#040A88</color>
+    <color name="colorProductRate">#FF9800</color>
+    <color name="colorError">#e5383b</color>
+    <color name="colorSuccess">#2ec4b6</color>
+    <color name="colorSecondary">#333533</color>
+    <color name="colorSecondary2">#003566</color>
+    <color name="kalertWarnColor">#fbcb4a</color>
+    <color name="kalertInfoColor">#b7c0ee</color>
+    <color name="colorGrey">#848fa5</color>
+    <color name="colorGrey2">#99848FA5</color>
+    <color name="colorGreyLight">#32848FA5</color>
+    <color name="colorRedLight">#17F3A0A6</color>
+    <color name="flatBlack">#222725</color>
+    <color name="flatGrey">#4D5753</color>
+    <color name="btn_color">@color/colorPrimary</color>
+</resources>

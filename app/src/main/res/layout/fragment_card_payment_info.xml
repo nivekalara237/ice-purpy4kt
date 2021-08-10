@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".infra.fragment.CardPaymentInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Debit Card Informations"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical|start"
+            android:textSize="19sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/invoice_address_text"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <com.craftman.cardform.CardForm
+            android:id="@+id/card_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+    </LinearLayout>
+</FrameLayout>

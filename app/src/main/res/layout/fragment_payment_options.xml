@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".infra.fragment.PaymentOptionsFragment">
+
+    <TextView android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Options"
+        android:textStyle="normal"
+        android:paddingVertical="16dp"
+        android:gravity="center_horizontal"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_below="@+id/go_shop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@+id/title"
+        android:id="@+id/cart_items_block"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:id="@+id/list"
+            android:padding="16dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/cash_mode"
+                android:background="@drawable/bg_cash_payment_mode"
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:id="@+id/icon_cash"
+                    android:tintMode="src_in"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cash_money"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_cash"
+                    android:paddingStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:layout_toEndOf="@+id/icon_cash"
+                    android:textColor="@color/flatGrey"
+                    android:text="@string/cash_payer_a_la_livraison"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:padding="6dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/card_mode"
+                android:background="@drawable/bg_card_payment_mode"
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:id="@+id/icon_card"
+                    android:tintMode="src_in"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_visa_card"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_card"
+                    android:paddingStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:layout_toEndOf="@+id/icon_card"
+                    android:textColor="@android:color/white"
+                    android:text="Credit / Debit Card"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="0dp"
+            app:cardBackgroundColor="@color/colorSecondary"
+            app:cardElevation="8dp"
+            android:visibility="gone"
+            android:id="@+id/summaryBlock"
+            android:foreground="@android:drawable/list_selector_background"
+            app:cardUseCompatPadding="false"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorProductRate"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:text="Continue"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:gravity="start"
+                    android:paddingStart="10dp"
+                    android:textSize="19sp"
+                    android:id="@+id/prize"
+                    android:textColor="@color/colorProductRate"
+                    android:layout_gravity="center"
+                    android:text="( $1034.00 )"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infra.fragment.PaymentResultFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="TODO" android:src="@drawable/ic_success_tick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:textStyle="normal"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="16dp">
+        <Button
+            android:id="@+id/backshopping"
+            android:src="@drawable/ic_baseline_add_white_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingVertical="4dp"
+            android:text="@string/continue_shopping"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:paddingHorizontal="28dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tint="@android:color/white"
+            android:background="@drawable/increase_btn_border"
+            android:layout_gravity="center"/>
+    </RelativeLayout>
+
+</RelativeLayout>

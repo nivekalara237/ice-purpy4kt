@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".infra.fragment.CashPaymentInfoFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/personal_info_payment_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invoice Address Informations"
+            android:textStyle="bold"
+            android:gravity="center_vertical|start"
+            android:textSize="19sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/invoice_address_text"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Address, streets, etc.."
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/flatGrey"
+                android:id="@+id/addresslabel"
+                android:paddingTop="8dp"
+                android:paddingBottom="5dp" />
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addresslabel"
+                android:gravity="center_vertical|start"
+                android:padding="12dp"
+                android:textColor="@color/flatBlack"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:inputType="textPostalAddress"
+                android:hint="Enter your full address.."
+                android:background="@drawable/bg_edittext"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginEnd="3dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Country"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/flatGrey"
+                    android:id="@+id/countrylabel"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp" />
+                <com.gbksoft.countrycodepickerlib.CountryCodePicker
+                    android:id="@+id/countryCodePickerView"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/countrylabel"
+                    android:layout_height="wrap_content"
+                    app:ccp_showFullName="true"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_showArrow="true"
+                    app:ccp_textSize="15sp"
+                    app:ccpDropDown_textColor="@color/flatBlack"
+                    app:ccp_contentColor="@color/flatBlack"
+                    app:ccp_arrowColor="@color/colorPrimary"
+                    app:ccp_arrowSize="15sp"
+                    android:padding="6dp"
+                    android:background="@drawable/bg_edittext"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoDetectLanguage="true"
+                    app:ccpDropDown_showNameCode="true"
+                    app:ccpDropDown_showPhoneCode="false"
+                    app:ccpDropDown_showFullCountryName="true"
+                    app:ccp_rememberLastSelection="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="State/Province"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/flatGrey"
+                    android:id="@+id/statelabel"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp" />
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statelabel"
+                    android:gravity="center_vertical|start"
+                    android:padding="12dp"
+                    android:textColor="@color/flatBlack"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:hint="Your current state. e.g: chicago"
+                    android:background="@drawable/bg_edittext"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginEnd="3dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="City"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/flatGrey"
+                    android:id="@+id/citylabel"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp" />
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/citylabel"
+                    android:gravity="center_vertical|start"
+                    android:padding="12dp"
+                    android:inputType="text"
+                    android:textColor="@color/flatBlack"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="Your current city"
+                    android:background="@drawable/bg_edittext"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Zipcode"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/flatGrey"
+                    android:id="@+id/zipcodelabel"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="5dp" />
+                <EditText
+                    android:id="@+id/zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zipcodelabel"
+                    android:gravity="center_vertical|start"
+                    android:padding="12dp"
+                    android:textColor="@color/flatBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:hint="Enter your zipcode"
+                    android:background="@drawable/bg_edittext"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deserved - $278,99"
+            android:layout_marginTop="32dp"
+            android:id="@+id/deserve"
+            android:layout_marginBottom="32dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/background_btn"/>
+    </LinearLayout>
+</ScrollView>

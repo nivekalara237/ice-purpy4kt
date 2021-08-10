@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="3dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="75"
+            android:layout_height="0dp">
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="TODO" android:src="@drawable/ic_baseline_info_24"
+                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
+                android:tint="@color/colorProductPrice"
+                android:id="@+id/icon_transaction"
+                android:layout_alignParentLeft="true"
+                android:layout_height="42dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingTop="16dp"
+                android:layout_toRightOf="@+id/icon_transaction"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="9839898 XAF"
+                    android:textSize="14sp"
+                    android:paddingRight="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/prix_transaction"
+                    android:textStyle="normal"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#484BAC"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/prix_transaction"
+                    android:textSize="9sp"
+                    android:textStyle="italic"
+                    android:paddingTop="2dp"
+                    android:id="@+id/status_transaction"
+                    android:layout_marginTop="4dp"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="BLACK AND WHITE BASTOS 0008889"
+                    android:textSize="12sp"
+                    android:textColor="#5a606d"
+                    android:paddingRight="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/numero_transaction"
+                    android:layout_below="@+id/prix_transaction"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Jeudi, 12 Dec 2013"
+                    android:textSize="9.5sp"
+                    android:textColor="#4e4d4d"
+                    android:paddingRight="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/date_transaction"
+                    android:layout_below="@+id/numero_transaction"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#7aaaaaaa"
+            android:layout_weight="1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="24"
+            android:background="#208399ae"
+            android:layout_height="0dp">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="TODO" android:src="@drawable/ic_baseline_credit_card_24"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:id="@+id/icon_carte"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="**** **** **** **** 1234"
+                android:textSize="12sp"
+                android:textColor="#a1a7b0"
+                android:paddingRight="30dp"
+                android:layout_marginLeft="3dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/numero_carte"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="2dp"
+                android:layout_toRightOf="@+id/icon_carte"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:contentDescription="TODO" android:focusable="true"
+                android:id="@+id/print_btn"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectedWeekBackgroundColor"
+                android:layout_height="32dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
